@@ -1,6 +1,6 @@
-gcs-to-bigquery-cloudfunction
+# gcs-to-bigquery-cloudfunction
 
-Cloud function for updating a BigQuery table with a Google Cloud Storage bucket change. Since its so generic I've put everything into environment variables:
+Cloud function for updating a BigQuery table with a Google Cloud Storage bucket change.
 
 ```sh
 gcloud functions deploy cloudStorageToBigQuery \
@@ -10,7 +10,7 @@ gcloud functions deploy cloudStorageToBigQuery \
       --trigger-event google.storage.object.finalize
 ```
 
-## Required environment variables
+## Environment variables
 
 ```sh
 GOOGLE_APPLICATION_CREDENTIALS=
