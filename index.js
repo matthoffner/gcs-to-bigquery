@@ -6,6 +6,6 @@ const storage = new Storage();
 exports.cloudStorageToBigQuery = (data) => {
     bq.dataset(process.env.DATASET)
         .table(process.env.TABLE)
-        .load(storage.bucket(process.env.BUCKET_NAME)
+        .load(storage.bucket(process.env.BUCKET)
         .file(data.name), { autodetect: true, writeDisposition: 'WRITE_APPEND' });
 }
